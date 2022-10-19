@@ -6,7 +6,6 @@ import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
 import androidx.room.OnConflictStrategy as OnConflictStrategy
 
-class WordDao {
     @Dao
     interface WordDao {
         @Query("SELECT * FROM word_table ORDER BY word ASC")
@@ -18,4 +17,3 @@ class WordDao {
         @Query("DELETE FROM word_table")
         suspend fun deleteAll()
     }
-}
